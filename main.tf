@@ -5,8 +5,8 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "default" {
-  name     = "firstrg20230804"
-  location = "East US 2"
+  name     = "myrgwesteurope"
+  location = "westeurope"
 
   tags = {
     environment = "test"
