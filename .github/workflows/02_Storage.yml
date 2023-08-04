@@ -4,7 +4,7 @@ on:
 
 jobs:
   Plan_Dev:
-    uses: omarinux/pocterraformactions/.github/workflows/az_tf_plan.yml@master
+    uses: omarinux/pocterraformactions/.github/workflows/az_tf_plan.yml@main
     with:
       path: 02_Storage                   ## Path to terraform root module (Required)
       tf_version: latest                 ## Terraform version e.g: 1.1.0 Default=latest (Optional)
@@ -22,7 +22,7 @@ jobs:
 
   Deploy_Dev:
     needs: Plan_Dev
-    uses: omarinux/pocterraformactions/.github/workflows/az_tf_apply.yml@master
+    uses: omarinux/pocterraformactions/.github/workflows/az_tf_apply.yml@main
     with:
       path: 02_Storage                   ## Path to terraform root module (Required)
       tf_version: latest                 ## Terraform version e.g: 1.1.0 Default=latest (Optional)
@@ -38,7 +38,7 @@ jobs:
       arm_tenant_id: ${{ secrets.AZURE_TENANT_ID }}             ## ARM Tenant ID
 
   Plan_Uat:
-    uses: omarinux/pocterraformactions/.github/workflows/az_tf_plan.yml@master
+    uses: omarinux/pocterraformactions/.github/workflows/az_tf_plan.yml@main
     with:
       path: 02_Storage
       az_resource_group: Terraform-GitHub-Backend
@@ -55,7 +55,7 @@ jobs:
 
   Deploy_Uat:
     needs: [Plan_Uat, Deploy_Dev]
-    uses: omarinux/pocterraformactions/.github/workflows/az_tf_apply.yml@master
+    uses: omarinux/pocterraformactions/.github/workflows/az_tf_apply.yml@main
     with:
       path: 02_Storage
       az_resource_group: Terraform-GitHub-Backend
@@ -70,7 +70,7 @@ jobs:
       arm_tenant_id: ${{ secrets.AZURE_TENANT_ID }}             ## ARM Tenant ID
 
   Plan_Prod:
-    uses: omarinux/pocterraformactions/.github/workflows/az_tf_plan.yml@master
+    uses: omarinux/pocterraformactions/.github/workflows/az_tf_plan.yml@main
     with:
       path: 02_Storage
       tf_version: latest
@@ -88,7 +88,7 @@ jobs:
 
   Deploy_Prod:
     needs: [Plan_Prod, Deploy_Uat]
-    uses: omarinux/pocterraformactions/.github/workflows/az_tf_apply.yml@master
+    uses: omarinux/pocterraformactions/.github/workflows/az_tf_apply.yml@main
     with:
       path: 02_Storage
       az_resource_group: Terraform-GitHub-Backend
