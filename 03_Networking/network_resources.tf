@@ -14,14 +14,14 @@ resource "azurerm_virtual_network" "network" {
   address_space       = var.network_config[count.index].address_space
 
   #Apply tags
-  tags = var.tags
+  #tags = var.tags
   
 }
 
 resource "azurerm_subnet" "subnet" {
   count               = length(var.subnet_config)
   resource_group_name = var.resource_group_name
-  location            = var.location
+  #location            = var.location
 
   name                 = "${lower(var.subnet_config[count.index].virtual_network_name)}${random_integer.sa_num.result}"
   virtual_network_name = "${lower(var.subnet_config[count.index].virtual_network_name)}${random_integer.sa_num.result}"
