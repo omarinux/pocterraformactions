@@ -5,12 +5,12 @@ network_config = [
   # UBS CH Address Space 10.0.0.0/16
   {
     name          = "netubsch"
-    address_space = ["10.0.0.0/16"]
+    address_space = [10.0.0.0/16]
   },
   # UBS France Address Space 10.10.0.0/16
   {
     name          = "netubsfr"
-    address_space = ["10.10.0.0/16"]
+    address_space = [10.10.0.0/16]
   }
 ]
 
