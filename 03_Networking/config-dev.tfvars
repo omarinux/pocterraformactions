@@ -18,24 +18,28 @@ network_config = [
 subnet_config = [
   # UBS CH BU Zurich Subnet 10.0.0.0/24
   {
+    name = "sububschzurich"
     virtual_network_name     = "sububschzurich"
     address_prefixes         = "10.0.0.0/24"
   },
 
   # UBS CH BU Bern Subnet 10.0.1.0/24
   {
+    name = "sububschbern"
     virtual_network_name     = "sububschbern"
     address_prefixes         = "10.0.1.0/24"
   },
 
   # UBS FR BU Paris Subnet 10.10.0.0/24
   {
+    name = "sububsfrparis"
     virtual_network_name     = "sububsfrparis"
     address_prefixes         = "10.10.0.0/24"
   },
   
   # UBS FR BU Lyon Subnet 10.10.1.0/24
   {
+    name = "sububsfrlyon"
     virtual_network_name     = "sububsfrlyon"
     address_prefixes         = "10.10.1.0/24"
   }

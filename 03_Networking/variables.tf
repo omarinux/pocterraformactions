@@ -19,6 +19,7 @@ variable "network_config" {
 
 variable "subnet_config" {
   type = list(object({
+    name = string
     virtual_network_name = string
     address_prefixes = string
 
