@@ -1,5 +1,6 @@
 name: "02_Storage"
 on:
+  pull_request:
   workflow_dispatch:
 
 jobs:
