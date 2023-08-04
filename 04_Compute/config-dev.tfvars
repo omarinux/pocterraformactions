@@ -1,10 +1,10 @@
-resource_group_name = "RG-UAT"
+resource_group_name = "RG-DEV"
 location            = "westeurope"
 
 storage_config = [
   #V2 Storage
   {
-    name                      = "saubs"
+    name                      = "saubsch"
     account_kind              = "StorageV2"
     account_tier              = "Standard"
     account_replication_type  = "LRS"
@@ -15,7 +15,7 @@ storage_config = [
   },
   #ADLS2 Storage
   {
-    name                      = "sacorner"
+    name                      = "sacornerch"
     account_kind              = "StorageV2"
     account_tier              = "Standard"
     account_replication_type  = "LRS"
@@ -29,5 +29,5 @@ storage_config = [
 tags = {
   terraformDeployment = "true",
   GithubRepo          = "https://github.com/omarinux/pocterraformactions"
-  Environment         = "UAT"
+  Environment         = "DEV"
 }
