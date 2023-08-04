@@ -1,28 +1,43 @@
 resource_group_name = "RG-UAT"
 location            = "westeurope"
 
-storage_config = [
-  #V2 Storage
+network_config = [
+  # UBS CH Address Space 10.0.0.0/16
   {
-    name                      = "saubs"
-    account_kind              = "StorageV2"
-    account_tier              = "Standard"
-    account_replication_type  = "LRS"
-    min_tls_version           = "TLS1_2"
-    enable_https_traffic_only = true
-    access_tier               = "Cool"
-    is_hns_enabled            = false
+    name                      = "netubsch"
+    address_space              = "10.0.0.0/16"
   },
-  #ADLS2 Storage
+  # UBS France Address Space 10.10.0.0/16
   {
-    name                      = "sacorner"
-    account_kind              = "StorageV2"
-    account_tier              = "Standard"
-    account_replication_type  = "LRS"
-    min_tls_version           = "TLS1_2"
-    enable_https_traffic_only = false
-    access_tier               = "Hot"
-    is_hns_enabled            = true
+    name                      = "netubsfr"
+    address_space              = "10.10.0.0/16"
+  }
+]
+
+
+subnet_config = [
+  # UBS CH BU Zurich Subnet 10.0.0.0/24
+  {
+    virtual_network_name     = "sububschzurich"
+    address_prefixes         = "10.0.0.0/24"
+  },
+
+  # UBS CH BU Bern Subnet 10.0.1.0/24
+  {
+    virtual_network_name     = "sububschbern"
+    address_prefixes         = "10.0.1.0/24"
+  },
+
+  # UBS FR BU Paris Subnet 10.10.0.0/24
+  {
+    virtual_network_name     = "sububsfrparis"
+    address_prefixes         = "10.10.0.0/24"
+  },
+  
+  # UBS FR BU Lyon Subnet 10.10.1.0/24
+  {
+    virtual_network_name     = "sububsfrlyon"
+    address_prefixes         = "10.10.1.0/24"
   }
 ]
 
