@@ -12,7 +12,7 @@ jobs:
       az_resource_group: vispoc-tstate-rg      ## AZ backend - AZURE Resource Group hosting terraform backend storage acc (Required)
       az_storage_acc: vispoctfstate3253    ## AZ backend - AZURE terraform backend storage acc (Required)
       az_container_name: tfstate ## AZ backend - AZURE storage container hosting state files (Required)
-      tf_key: storage-dev.tfstate                ## AZ backend - Specifies name that will be given to terraform state file and plan artifact (Required)
+      tf_key: network-dev.tfstate                ## AZ backend - Specifies name that will be given to terraform state file and plan artifact (Required)
       tf_vars_file: config-dev.tfvars    ## Terraform TFVARS (Required)
       enable_TFSEC: true                 ## (Optional)  Enable TFSEC IaC scans (Private repo requires GitHub enterprise)
     secrets:
@@ -30,7 +30,7 @@ jobs:
       az_resource_group: vispoc-tstate-rg      ## AZ backend - AZURE Resource Group hosting terraform backend storage acc (Required)
       az_storage_acc: vispoctfstate3253    ## AZ backend - AZURE terraform backend storage acc (Required)
       az_container_name: tfstate ## AZ backend - AZURE storage container hosting state files (Required)
-      tf_key: storage-dev.tfstate                ## AZ backend - Specifies name that will be given to terraform state file and plan artifact (Required)
+      tf_key: network-dev.tfstate                ## AZ backend - Specifies name that will be given to terraform state file and plan artifact (Required)
       gh_environment: Development        ## GH Environment. Default=null - (Optional)
     secrets:
       arm_client_id: ${{ secrets.AZURE_CLIENT_ID }}             ## ARM Client ID 
