@@ -23,8 +23,8 @@ resource "azurerm_subnet" "subnet" {
   resource_group_name = var.resource_group_name
   location            = var.location
 
-  name                 = random_pet.azurerm_subnet_name.id
-  virtual_network_name = "${lower(var.subnet_config[count.index].name)}${random_integer.sa_num.result}"
+  name                 = "${lower(var.subnet_config[count.index].virtual_network_name)}${random_integer.sa_num.result}"
+  virtual_network_name = "${lower(var.subnet_config[count.index].virtual_network_name)}${random_integer.sa_num.result}"
   address_prefixes     = var.subnet_config[count.index].address_prefixes
 }
 
