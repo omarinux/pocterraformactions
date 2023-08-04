@@ -14,7 +14,7 @@ resource "azurerm_virtual_network" "network" {
   address_space = var.network_config[count.index].address_space
 
   #Apply tags
-  #tags = var.tags
+  tags = var.tags
 
 }
 
