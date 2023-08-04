@@ -10,6 +10,6 @@ resource "azurerm_resource_group" "default" {
 
   tags = {
     environment = "test"
-    #cost = "mycost"
+    cost = "mycost"
   }
 }
