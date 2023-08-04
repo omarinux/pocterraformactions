@@ -11,7 +11,7 @@ resource "azurerm_virtual_network" "network" {
   location            = var.location
 
   name          = "${lower(var.network_config[count.index].name)}${random_integer.sa_num.result}"
-  address_space = var.network_config[count.index].address_space
+  address_space = var.network_config.address_space
 
   #Apply tags
   tags = var.tags
