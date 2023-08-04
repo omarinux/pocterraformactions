@@ -5,17 +5,17 @@
 
 resource "azurerm_virtual_network" "network" {
   #name                = random_pet.azurerm_virtual_network_name.id
-  
+
   count               = length(var.network_config)
   resource_group_name = var.resource_group_name
   location            = var.location
-  
-  name = "${lower(var.network_config[count.index].name)}${random_integer.sa_num.result}"
-  address_space       = var.network_config[count.index].address_space
+
+  name          = "${lower(var.network_config[count.index].name)}${random_integer.sa_num.result}"
+  address_space = var.network_config[count.index].address_space
 
   #Apply tags
   #tags = var.tags
-  
+
 }
 
 resource "azurerm_subnet" "subnet" {

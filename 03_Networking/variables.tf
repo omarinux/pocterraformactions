@@ -11,19 +11,19 @@ variable "location" {
 
 variable "network_config" {
   type = list(object({
-    name                      = string
-    address_space              = string
+    name          = string
+    address_space = string
 
-}))
+  }))
 }
 
 variable "subnet_config" {
   type = list(object({
-    name = string
+    name                 = string
     virtual_network_name = string
-    address_prefixes = string
+    address_prefixes     = string
 
-}))
+  }))
 }
 
 
