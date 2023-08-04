@@ -4,7 +4,7 @@ location            = "westeurope"
 storage_config = [
   #V2 Storage
   {
-    name                      = "sa-ubs-"
+    name                      = "sa-ubs-ch-"
     account_kind              = "StorageV2"
     account_tier              = "Standard"
     account_replication_type  = "LRS"
@@ -15,7 +15,7 @@ storage_config = [
   },
   #ADLS2 Storage
   {
-    name                      = "sa-corner-"
+    name                      = "sa-corner-ch-"
     account_kind              = "StorageV2"
     account_tier              = "Standard"
     account_replication_type  = "LRS"
