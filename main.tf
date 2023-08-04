@@ -6,7 +6,7 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "default" {
   name     = "myrgwesteurope"
-  location = "West Europe"
+  location = "westeurope"
 
   tags = {
     environment = "test"
