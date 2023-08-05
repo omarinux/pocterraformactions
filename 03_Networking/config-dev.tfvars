@@ -42,7 +42,6 @@ default = {
       ]
     }
   }
-}
 
 /* network_config = [
   # UBS CH Address Space 10.0.0.0/16
@@ -91,7 +90,7 @@ subnet_config = [
   }
 ]
  */
- 
+
 tags = {
   terraformDeployment = "true",
   GithubRepo          = "https://github.com/omarinux/pocterraformactions"
