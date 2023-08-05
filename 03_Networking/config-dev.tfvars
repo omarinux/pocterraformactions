@@ -1,29 +1,29 @@
 
 vnets = [
   {
-    vnet_name     = "John"
+    vnet_name     = "netubsch"
     address_space = ["192.168.0.0/23"]
     subnets = [
       {
-        name    = "DomainServers"
+        name    = "sububschzurich"
         address = "192.168.0.0/24"
       },
       {
-        name    = "ClientsServers"
+        name    = "sububschbern"
         address = "192.168.1.0/24"
       }
     ]
   },
   {
-    vnet_name     = "Ohad"
+    vnet_name     = "netubsfr"
     address_space = ["192.168.0.0/23"]
     subnets = [
       {
-        name    = "DomainServers"
+        name    = "sububsfrparis"
         address = "192.168.0.0/24"
       },
       {
-        name    = "Controllers"
+        name    = "sububsfrlyon"
         address = "192.168.1.0/24"
       }
     ]
