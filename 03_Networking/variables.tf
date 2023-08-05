@@ -24,7 +24,7 @@ variable "vnets" {
 
 
 
-  /* variable "network_config" {
+/* variable "network_config" {
   type = list(object({
     name          = string
     address_space = string

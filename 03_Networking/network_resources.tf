@@ -37,7 +37,7 @@ resource "azurerm_virtual_network" "test" {
   location            = var.location
   resource_group_name = var.resource_group_name
   address_space       = var.vnets[count.index].address_space
-  
+
   #Apply tags
   tags = var.tags
 
