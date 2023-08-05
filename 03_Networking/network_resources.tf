@@ -17,18 +17,7 @@
   tags = var.tags
 
 } */
-
-resource "azurerm_virtual_network" "vnets" {
-  for_each            = var.vnets
-  name                = each.key
-  resource_group_name = var.resource_group_name
-  location            = var.location
-  address_space       = [each.value.address_space]
-
-  #Apply tags
-  #tags = var.tags
-
-}
+  
 
 resource "azurerm_virtual_network" "test" {
   count = length(var.vnets)
