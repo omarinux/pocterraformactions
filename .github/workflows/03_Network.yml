@@ -1,6 +1,11 @@
 name: "03_Networking"
 on:
+  push:
+    paths:
+      - "03_Networking/**"
   pull_request:
+    paths:
+      - "03_Networking/**"
   workflow_dispatch:
 
 jobs:
