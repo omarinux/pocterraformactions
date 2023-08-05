@@ -30,6 +30,27 @@ resource "azurerm_virtual_network" "vnets" {
 
 }
 
+resource "azurerm_virtual_network" "test" {
+  count = length(var.vnets)
+
+  name                = var.vnets[count.index].vnet_name
+  location            = var.location
+  resource_group_name = var.resource_group_name
+  address_space       = var.vnets[count.index].address_space
+  
+  #Apply tags
+  tags = var.tags
+
+  dynamic "subnet" {
+    for_each = var.vnets[count.index].subnets
+
+    content {
+      name           = subnet.value.name
+      address_prefix = subnet.value.address
+    }
+  }
+}
+
 
 
 /* resource "azurerm_subnet" "subnet" {

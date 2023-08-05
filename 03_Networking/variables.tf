@@ -10,14 +10,17 @@ variable "location" {
 }
 
 
+
 variable "vnets" {
-  type = map(object({
-    address_space = string
+  type = list(object({
+    vnet_name     = string
+    address_space = list(string)
     subnets = list(object({
-      subnet_name    = string
-      subnet_address = string
+      name    = string
+      address = string
     }))
   }))
+}
 
 
 
@@ -38,7 +41,7 @@ variable "subnet_config" {
   }))
  */
 
-}
+
 
 
 variable "tags" {

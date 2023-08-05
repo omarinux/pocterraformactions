@@ -1,43 +1,34 @@
 
-default = {
-  "netubsch1" = {
-    address_space = "192.168.0.0/16",
-    subnets       = []
-  },
-  "netubsfr1" = {
-    address_space = "10.0.0.0/16",
+vnets = [
+  {
+    vnet_name     = "John"
+    address_space = ["192.168.0.0/23"]
     subnets = [
       {
-        subnet_name    = "sububsfr1_paris_netubsfr1"
-        subnet_address = "10.0.2.0/24"
+        name    = "DomainServers"
+        address = "192.168.0.0/24"
       },
       {
-        subnet_name    = "sububsfr2_lyon_netubsfr1"
-        subnet_address = "10.0.0.0/24"
+        name    = "ClientsServers"
+        address = "192.168.1.0/24"
       }
     ]
   },
-
-  "netcornerch1" = {
-    address_space = "10.80.0.0/16"
+  {
+    vnet_name     = "Ohad"
+    address_space = ["192.168.0.0/23"]
     subnets = [
       {
-        subnet_name    = "subcornerch1_bern_netcornerch1"
-        subnet_address = "10.80.2.0/24"
+        name    = "DomainServers"
+        address = "192.168.0.0/24"
       },
-
       {
-        subnet_name    = "subcornerch2_zurich_netcornerch1"
-        subnet_address = "10.80.1.0/24"
-      },
-
-      {
-        subnet_name    = "subcornerch3_lugano_netcornerch1"
-        subnet_address = "10.80.0.0/24"
-      },
+        name    = "Controllers"
+        address = "192.168.1.0/24"
+      }
     ]
   }
-}
+]
 
 resource_group_name = "RG-DEV"
 location            = "westeurope"
