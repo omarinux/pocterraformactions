@@ -21,7 +21,7 @@ variable "vnets" {
 
 
 
-/* variable "network_config" {
+  /* variable "network_config" {
   type = list(object({
     name          = string
     address_space = string
@@ -36,9 +36,9 @@ variable "subnet_config" {
     address_prefixes     = string
 
   }))
- */ 
+ */
 
- }
+}
 
 
 variable "tags" {
