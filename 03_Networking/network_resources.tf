@@ -3,7 +3,7 @@
 ##################################################
 #Create Network resources needed for my super awesome project
 
-resource "azurerm_virtual_network" "network" {
+/* resource "azurerm_virtual_network" "network" {
   #name                = random_pet.azurerm_virtual_network_name.id
 
   count               = length(var.network_config)
@@ -16,9 +16,21 @@ resource "azurerm_virtual_network" "network" {
   #Apply tags
   tags = var.tags
 
+} */
+
+resource "azurerm_virtual_network" "vnets" {
+  for_each            = var.vnets
+  name                = each.key
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  address_space       = [each.value.address_space]
+  
+  #Apply tags
+  tags = var.tags
+
 }
 
-resource "azurerm_subnet" "subnet" {
+/* resource "azurerm_subnet" "subnet" {
   count               = length(var.subnet_config)
   resource_group_name = var.resource_group_name
   #location            = var.location
@@ -31,7 +43,7 @@ resource "azurerm_subnet" "subnet" {
 resource "random_integer" "sa_num" {
   min = 0001
   max = 9999
-}
+} */
 
 
 

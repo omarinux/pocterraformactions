@@ -9,7 +9,19 @@ variable "location" {
   default     = "westeurope"
 }
 
-variable "network_config" {
+
+variable "vnets" {
+  type = map(object({
+    address_space = string
+    subnets = list(object({
+      subnet_name    = string
+      subnet_address = string
+    }))
+  }))
+
+
+
+/* variable "network_config" {
   type = list(object({
     name          = string
     address_space = string
@@ -24,7 +36,7 @@ variable "subnet_config" {
     address_prefixes     = string
 
   }))
-}
+ */}
 
 
 variable "tags" {
