@@ -4,44 +4,44 @@ location            = "westeurope"
 
 
 default = {
-    "netubsch1" = {
-      address_space = "192.168.0.0/16",
-      subnets       = []
-    },
-    "netubsfr1" = {
-      address_space = "10.0.0.0/16",
-      subnets = [
-        {
-          subnet_name    = "sububsfr1_paris_netubsfr1"
-          subnet_address = "10.0.2.0/24"
-        },
-        {
-          subnet_name    = "sububsfr2_lyon_netubsfr1"
-          subnet_address = "10.0.0.0/24"
-        }
-      ]
-    },
+  "netubsch1" = {
+    address_space = "192.168.0.0/16",
+    subnets       = []
+  },
+  "netubsfr1" = {
+    address_space = "10.0.0.0/16",
+    subnets = [
+      {
+        subnet_name    = "sububsfr1_paris_netubsfr1"
+        subnet_address = "10.0.2.0/24"
+      },
+      {
+        subnet_name    = "sububsfr2_lyon_netubsfr1"
+        subnet_address = "10.0.0.0/24"
+      }
+    ]
+  },
 
-    "netcornerch1" = {
-      address_space = "10.80.0.0/16"
-      subnets = [
-        {
-          subnet_name    = "subcornerch1_bern_netcornerch1"
-          subnet_address = "10.80.2.0/24"
-        },
+  "netcornerch1" = {
+    address_space = "10.80.0.0/16"
+    subnets = [
+      {
+        subnet_name    = "subcornerch1_bern_netcornerch1"
+        subnet_address = "10.80.2.0/24"
+      },
 
-        {
-          subnet_name    = "subcornerch2_zurich_netcornerch1"
-          subnet_address = "10.80.1.0/24"
-        },
+      {
+        subnet_name    = "subcornerch2_zurich_netcornerch1"
+        subnet_address = "10.80.1.0/24"
+      },
 
-        {
-          subnet_name    = "subcornerch3_lugano_netcornerch1"
-          subnet_address = "10.80.0.0/24"
-        },
-      ]
-    }
+      {
+        subnet_name    = "subcornerch3_lugano_netcornerch1"
+        subnet_address = "10.80.0.0/24"
+      },
+    ]
   }
+}
 
 /* network_config = [
   # UBS CH Address Space 10.0.0.0/16

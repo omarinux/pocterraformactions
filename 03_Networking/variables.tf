@@ -36,7 +36,7 @@ variable "subnet_config" {
     address_prefixes     = string
 
   }))
- */}
+ */ }
 
 
 variable "tags" {
