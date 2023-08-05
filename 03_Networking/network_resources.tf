@@ -17,7 +17,7 @@
   tags = var.tags
 
 } */
-  
+
 
 resource "azurerm_virtual_network" "test" {
   count = length(var.vnets)
