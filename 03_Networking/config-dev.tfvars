@@ -1,7 +1,3 @@
-resource_group_name = "RG-DEV"
-location            = "westeurope"
-
-
 
 default = {
   "netubsch1" = {
@@ -42,6 +38,9 @@ default = {
     ]
   }
 }
+
+resource_group_name = "RG-DEV"
+location            = "westeurope"
 
 /* network_config = [
   # UBS CH Address Space 10.0.0.0/16
