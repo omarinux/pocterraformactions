@@ -16,7 +16,7 @@ vnets = [
   },
   {
     vnet_name     = "netubsfr"
-    address_space = ["192.168.5.0/23"]
+    address_space = ["192.168.4.0/23"]
     subnets = [
       {
         name    = "sububsfrparis"
@@ -34,11 +34,11 @@ vnets = [
     subnets = [
       {
         name    = "subcornerchlugano"
-        address = "192.168.9.0/24"
+        address = "192.168.10.0/24"
       },
       {
         name    = "subcornerchbasel"
-        address = "192.168.10.0/24"
+        address = "192.168.11.0/24"
       }
     ]
   }
