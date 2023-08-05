@@ -20,11 +20,11 @@ vnets = [
     subnets = [
       {
         name    = "sububsfrparis"
-        address = "192.168.5.0/24"
+        address = "192.168.4.0/24"
       },
       {
         name    = "sububsfrlyon"
-        address = "192.168.6.0/24"
+        address = "192.168.5.0/24"
       }
     ]
   },
@@ -34,11 +34,11 @@ vnets = [
     subnets = [
       {
         name    = "subcornerchlugano"
-        address = "192.168.10.0/24"
+        address = "192.168.9.0/24"
       },
       {
         name    = "subcornerchbasel"
-        address = "192.168.11.0/24"
+        address = "192.168.10.0/24"
       }
     ]
   }
