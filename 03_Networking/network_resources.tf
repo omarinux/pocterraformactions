@@ -26,9 +26,11 @@ resource "azurerm_virtual_network" "vnets" {
   address_space       = [each.value.address_space]
 
   #Apply tags
-  tags = var.tags
+  #tags = var.tags
 
 }
+
+
 
 /* resource "azurerm_subnet" "subnet" {
   count               = length(var.subnet_config)
