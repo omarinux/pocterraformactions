@@ -7,8 +7,8 @@ data "azurerm_client_config" "current" {}
 
 resource "azurerm_resource_group" "rg" {
   count    = length(var.rg_config)
-  name     = var.resource_group_name
-  location = var.location
+  name     = var.rg_config[count.index].resource_group_name
+  location = var.rg_config[count.index].location
 
   #Apply tags
   tags = var.tags
