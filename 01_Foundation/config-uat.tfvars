@@ -1,15 +1,15 @@
 rg_config = [
   #rg uat default
   {
-    resource_group_name       = "RG-UAT"
-    location              = "westeurope"
-    use_rbac_mode              = true
+    resource_group_name = "RG-UAT"
+    location            = "westeurope"
+    use_rbac_mode       = true
   },
   #rg uat private IT SYS ADMINS
   {
-    resource_group_name       = "RG-UAT-PRIVATE"
-    location              = "westeurope"
-    use_rbac_mode              = true
+    resource_group_name = "RG-UAT-PRIVATE"
+    location            = "westeurope"
+    use_rbac_mode       = true
   }
 ]
 

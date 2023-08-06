@@ -1,15 +1,15 @@
 rg_config = [
   #rg dev default
   {
-    resource_group_name       = "RG-DEV"
-    location              = "westeurope"
-    use_rbac_mode              = true
+    resource_group_name = "RG-DEV"
+    location            = "westeurope"
+    use_rbac_mode       = true
   },
   #rg dev private IT SYS ADMINS
   {
-    resource_group_name       = "RG-DEV-PRIVATE"
-    location              = "westeurope"
-    use_rbac_mode              = true
+    resource_group_name = "RG-DEV-PRIVATE"
+    location            = "westeurope"
+    use_rbac_mode       = true
   }
 ]
 
