@@ -4,6 +4,12 @@ on:
 #  push:
 #    branches:
 #    - main
+  push:
+    paths:
+      - "01_Foundation/**"
+  pull_request:
+    paths:
+      - "01_Foundation/**"
   workflow_dispatch:
 
 jobs:

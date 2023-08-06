@@ -1,6 +1,11 @@
 name: "02_Storage"
 on:
+  push:
+    paths:
+      - "02_Storage/**"
   pull_request:
+    paths:
+      - "02_Storage/**"
   workflow_dispatch:
 
 jobs:
