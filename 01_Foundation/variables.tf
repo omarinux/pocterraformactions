@@ -24,3 +24,10 @@ variable "tags" {
   type        = map(any)
   description = "Specifies a map of tags to be applied to the resources created."
 }
+
+variable "rg_config" {
+  type = list(object({
+    resource_group_name       = string
+    location                  = string
+  }))
+}
