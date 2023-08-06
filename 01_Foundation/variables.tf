@@ -27,7 +27,7 @@ variable "tags" {
 
 variable "rg_config" {
   type = list(object({
-    resource_group_name       = string
-    location                  = string
+    resource_group_name = string
+    location            = string
   }))
 }
