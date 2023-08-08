@@ -2,7 +2,7 @@
 
 [nodes]
 %{ for index, virtualnetwork in virtualnetwork_name ~}
-${virtualnetwork} ${locationtpl[index]}
+${virtualnetwork} ${locationtpl[index]} ${address_space[index]}
 %{ endfor ~}
 
 
