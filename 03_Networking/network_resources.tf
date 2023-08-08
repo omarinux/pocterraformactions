@@ -43,8 +43,8 @@ resource "azurerm_virtual_network" "test" {
 resource "local_file" "ansible_hosts_file" {
   content = templatefile("hosts.tpl", {
     virtualnetwork_name = azurerm_virtual_network.test.*.name,
-    addressspace_name   = azurerm_virtual_network.test.*.address_space[count.index]
-    locationtpl         = azurerm_virtual_network.test.*.location[count.index]
+    addressspace_name   = azurerm_virtual_network.test.*.id
+    locationtpl         = azurerm_virtual_network.test.*.location
   })
   filename = "hosts"
 }
