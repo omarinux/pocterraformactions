@@ -3,7 +3,6 @@ vnets = [
   {
     vnet_name     = "netubsch"
     address_space = ["192.168.0.0/23"]
-    location      = "westeurope"
     subnets = [
       {
         name    = "sububschzurich"
@@ -18,7 +17,6 @@ vnets = [
   {
     vnet_name     = "netubsfr"
     address_space = ["192.168.4.0/23"]
-    location      = "westeurope"
     subnets = [
       {
         name    = "sububsfrparis"
@@ -33,7 +31,6 @@ vnets = [
   {
     vnet_name     = "netcornerch"
     address_space = ["192.168.10.0/23"]
-    location      = "westeurope"
     subnets = [
       {
         name    = "subcornerchlugano"
@@ -48,7 +45,6 @@ vnets = [
   {
     vnet_name     = "netintesait"
     address_space = ["192.168.20.0/23"]
-    location      = "uksouth"
     subnets = [
       {
         name    = "subintesaitmilan"
@@ -63,7 +59,7 @@ vnets = [
 ]
 
 resource_group_name = "RG-DEV"
-#location            = "westeurope"
+location            = "westeurope"
 
 tags = {
   terraformDeployment = "true",

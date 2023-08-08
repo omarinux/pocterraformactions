@@ -23,7 +23,7 @@ resource "azurerm_virtual_network" "test" {
   count = length(var.vnets)
 
   name                = var.vnets[count.index].vnet_name
-  location            = var.vnets[count.index].location
+  location            = var.location
   resource_group_name = var.resource_group_name
   address_space       = var.vnets[count.index].address_space
 
