@@ -61,7 +61,7 @@ vnets = [
 ]
 
 resource_group_name = "RG-DEV"
-location            = "westeurope"
+#location            = "westeurope"
 
 tags = {
   terraformDeployment = "true",
