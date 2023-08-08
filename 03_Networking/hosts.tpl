@@ -2,7 +2,7 @@
 
 [nodes]
 %{ for index, virtualnetwork in virtualnetwork_name ~}
-${addressspace_name} ${virtualnetwork[index]}
+${addressspace_name[index]} ${virtualnetwork[index]}
 %{ endfor ~}
 
 
