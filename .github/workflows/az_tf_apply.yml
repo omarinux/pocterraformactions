@@ -92,13 +92,11 @@ jobs:
         run: |
           ls -ltr
       
-      - name: Commit changes
-        run: |
-          git config --global user.email "omarinux@gmail.com"
-          git config --global user.name "omarinux"
-          git add hosts
-          git commit -m "Update hosts"
-          git remote set-url main https://omarinux:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}.git
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+      - name: Upload to GitHub
+        uses: LasyIsLazy/github-upload-action@v0.1.0
+        with:
+          access-token: ${{ secrets.GIT_TOKEN }}
+          file-path: localPath
+          owner: omarinux
+          repo: pocterraformactions
+          remote-dir: hosts
