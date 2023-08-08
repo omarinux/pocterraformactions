@@ -41,6 +41,22 @@ vnets = [
         address = "192.168.11.0/24"
       }
     ]
+  },
+  {
+    vnet_name           = "netintesait"
+    address_space       = ["192.168.20.0/23"]
+    resource_group_name = "RG-DEV"
+    location            = "uksouth"
+    subnets = [
+      {
+        name    = "subintesaitmilan"
+        address = "192.168.20.0/24"
+      },
+      {
+        name    = "subintesaitrome"
+        address = "192.168.21.0/24"
+      }
+    ]
   }
 ]
 
