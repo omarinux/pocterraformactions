@@ -99,4 +99,3 @@ jobs:
           file-path: ./
           owner: omarinux
           repo: pocterraformactions
-          remote-dir: hosts
