@@ -90,8 +90,4 @@ jobs:
       
       - name: push changes to remote
         run: |
-          git config --global user.name "omarinux"
-          git config --global user.email "omarinux@gmail.com"
-          git add -A
-          git commit -m "hosts file"
-          git push
+          ls -ltr
