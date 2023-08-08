@@ -1,5 +1,5 @@
 #[Vnet]
 
 %{ for index, virtualnetwork in virtualnetwork_name ~}
-${virtualnetwork} ${address_space[index]}
+${virtualnetwork} ${addressspace_name[index]}
 %{ endfor ~}
