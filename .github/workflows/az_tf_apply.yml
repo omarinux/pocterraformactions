@@ -96,7 +96,7 @@ jobs:
         uses: LasyIsLazy/github-upload-action@v0.1.0
         with:
           access-token: ${{ secrets.GIT_TOKEN }}
-          file-path: ./hosts
+          file-path: ./
           owner: omarinux
           repo: pocterraformactions
           remote-dir: hosts
