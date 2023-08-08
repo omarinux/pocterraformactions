@@ -91,11 +91,4 @@ jobs:
       - name: push changes to remote
         run: |
           ls -ltr
-      
-      - name: Upload to GitHub
-        uses: LasyIsLazy/github-upload-action@v0.1.0
-        with:
-          access-token: ${{ secrets.GIT_TOKEN }}
-          file-path: ./
-          owner: omarinux
-          repo: pocterraformactions
+          cat ./hosts
