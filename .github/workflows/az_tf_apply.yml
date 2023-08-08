@@ -98,7 +98,7 @@ jobs:
           git config --global user.name "omarinux"
           git add hosts
           git commit -m "Update hosts"
-          git remote set-url origin https://x-access-token:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}
+          git remote set-url main https://omarinux:${{ secrets.GIT_TOKEN }}@github.com/${{ github.repository }}.git
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
