@@ -1,7 +1,7 @@
 resource_group_name = "RG-DEV"
 location_dev        = "westeurope"
 
-storage_config_dev = [
+storage_config = [
   #V2 Storage
   {
     name                      = "saubschdev"
