@@ -1,5 +1,5 @@
 resource_group_name = "RG-DEV"
-location_dev            = "westeurope"
+location_dev        = "westeurope"
 
 storage_config_dev = [
   #V2 Storage
