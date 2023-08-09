@@ -1,10 +1,10 @@
 resource_group_name = "RG-DEV"
-location            = "westeurope"
+location_dev            = "westeurope"
 
-storage_config = [
+storage_config_dev = [
   #V2 Storage
   {
-    name                      = "saubsch"
+    name                      = "saubschdev"
     account_kind              = "StorageV2"
     account_tier              = "Standard"
     account_replication_type  = "LRS"
@@ -15,7 +15,7 @@ storage_config = [
   },
   #ADLS2 Storage
   {
-    name                      = "sacornerch"
+    name                      = "sacornerchdev"
     account_kind              = "StorageV2"
     account_tier              = "Standard"
     account_replication_type  = "LRS"
