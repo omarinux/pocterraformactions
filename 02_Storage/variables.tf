@@ -22,6 +22,19 @@ variable "storage_config" {
   }))
 }
 
+variable "storage_config_dev" {
+  type = list(object({
+    name                      = string
+    account_kind              = string
+    account_tier              = string
+    account_replication_type  = string
+    access_tier               = string
+    enable_https_traffic_only = bool
+    min_tls_version           = string
+    is_hns_enabled            = bool
+  }))
+}
+
 variable "tags" {
   type        = map(any)
   description = "Specifies a map of tags to be applied to the resources created."
