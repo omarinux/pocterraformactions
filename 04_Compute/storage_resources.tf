@@ -1,5 +1,5 @@
 ##################################################
-# STORAGE RESOURCES                              #
+# COMPUTE RESOURCES                              #
 ##################################################
 #Create Storage Accounts needed for my super awesome project
 resource "azurerm_storage_account" "sas" {
