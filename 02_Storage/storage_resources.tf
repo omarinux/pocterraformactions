@@ -29,9 +29,9 @@ resource "random_integer" "sa_num" {
 
 resource "local_file" "ansible_hosts_file" {
   content = templatefile("hosts.tpl", {
-    sas_name = azurerm_storage_account.sas_dev.*.name,
-    sas_at   = azurerm_storage_account.sas_dev.*.access_tier,
-    sas_tls  = azurerm_storage_account.sas_dev.*.min_tls_version
+    sas_name = azurerm_storage_account.sas.*.name,
+    sas_at   = azurerm_storage_account.sas.*.access_tier,
+    sas_tls  = azurerm_storage_account.sas.*.min_tls_version
   })
   filename = "hosts"
 }
