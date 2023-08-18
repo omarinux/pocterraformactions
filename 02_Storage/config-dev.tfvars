@@ -30,4 +30,5 @@ tags = {
   terraformDeployment = "true",
   GithubRepo          = "https://github.com/omarinux/pocterraformactions"
   Environment         = "DEV"
+  Cost                = "ITA"
 }
