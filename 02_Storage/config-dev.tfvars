@@ -31,4 +31,5 @@ tags = {
   GithubRepo          = "https://github.com/omarinux/pocterraformactions"
   Environment         = "DEV"
   Cost                = "ITA"
+  Memo                = "test"
 }
